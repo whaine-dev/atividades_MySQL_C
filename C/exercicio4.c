@@ -542,6 +542,49 @@ void questao17(void) {
 
 }
 
+int main() {
+
+    int numero[10], vp[10], vi[10];
+    int par = 0, impar = 0;
+
+    for(int i = 0; i < 10; i++) {
+        printf("Digite o %i° número: ", i + 1);
+        scanf("%i", &numero[i]);
+
+        if(numero[i] % 2 == 0) {
+            vp[par] = numero[i];
+            par++;
+        } else {
+            vi[impar] = numero[i];
+            impar++;
+        }
+    }
+
+    printf("\n\n");
+
+    for(int x = 0; x < 10; x++) {
+        printf("número: %i \n", numero[x]);
+    }
+
+    printf("\n\n");
+
+    for(int y = 0; y < 10; y++) {
+        if(vp[y] != 0) {
+            printf("número pares: %i \n", vp[y]);
+        }
+    }
+
+    printf("\n\n");
+
+    for(int w = 0; w < impar; w++) {
+        printf("número impas: %i \n", vi[w]);
+     
+    }
+
+
+    return 0;
+}
+
 int main(void)
 {
 
@@ -562,6 +605,7 @@ int main(void)
     // questao15();
     // questao16();
     // questao17();
+    // questao18();
 
     return 0;
 }
