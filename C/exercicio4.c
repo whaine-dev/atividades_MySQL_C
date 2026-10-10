@@ -514,12 +514,40 @@ void questao16(void) {
 
 }
 
+void questao17(void) {
+
+    int numero[10], maior, menor;
+
+    for(int i = 0; i < 10; i++){
+        printf("Digite o %i° número: ", i + 1);
+        scanf("%i", &numero[i]);
+
+        if (i == 0) {
+            maior = numero[i];
+            menor = numero[i];
+        }
+
+        if(numero[i] > maior) {
+            maior = numero[i];
+        }
+
+        if(numero[i] < menor) {
+            menor = numero[i];
+        }
+
+    }
+
+    printf("Maior número: %i\n", maior);
+    printf("Menor número: %i", menor);
+
+}
+
 int main(void)
 {
 
     // questao1();
     // questao2();
-    // questao();
+    // questao3();
     // questao4();
     // questao5();
     // questao6();
@@ -533,6 +561,7 @@ int main(void)
     // questao14();
     // questao15();
     // questao16();
+    // questao17();
 
     return 0;
 }
