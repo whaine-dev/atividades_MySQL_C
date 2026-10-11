@@ -604,6 +604,31 @@ void questao19(void) {
     }
 }
 
+void questao20(void) {
+    char letra[20];
+    int vogais = 0, consoante = 0;
+    float percentual;
+
+    printf("Digite uma palavra de 20 caracteres: ");
+    fgets(letra, sizeof(letra), stdin);
+
+    for(int i = 0; i < 20; i++) {
+        if(letra[i] == 'a' || letra[i] == 'A' || letra[i] == 'b' || letra[i] == 'B' || letra[i] == 'c' || letra[i] == 'C' || letra[i] == 'd' || letra[i] == 'D' || letra[i] == 'e' || letra[i] == 'E') 
+        {
+            vogais = vogais + 1;
+        } else {
+            consoante = consoante + 1;
+    }
+
+    }
+
+    percentual = ((float)consoante / 20) * 100;
+
+    printf("Quantidade de vogais: %i\n", vogais);
+    printf("percentual de consoante: %.2f%%", percentual);
+}
+
+
 int main(void)
 {
 
@@ -626,6 +651,7 @@ int main(void)
     // questao17();
     // questao18();
     // questao19();
+    // questao20();
 
     return 0;
 }
