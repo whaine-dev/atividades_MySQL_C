@@ -702,6 +702,47 @@ void questao22(void) {
 
 }
 
+void questao23(void) {
+
+    char nome[20][100], nomeIdade[20];
+    int idade[20], sexo[20], maiorIdade = 0;
+    int soma = 0, somaMulher = 0;
+    float media;
+
+    for(int i = 0; i < 3; i++) {
+        printf("\n%i° pessoa\n", i + 1);
+        printf("Digite seu nome: ");
+        fgets(nome[i], sizeof(nome[i]), stdin);
+
+        printf("Digite sua idade: ");
+        scanf("%i", &idade[i]);
+        
+        printf("Digite 1 mulher e 2 para homem: ");
+        scanf("%i", &sexo[i]);
+        getchar();
+
+        if(sexo[i] == 2 && idade[i] > maiorIdade) {
+            maiorIdade = idade[i];
+            strcpy(nomeIdade, nome[i]);
+        }
+
+        if(sexo[i] == 1) {
+            soma = soma + idade[i];
+            somaMulher = somaMulher + 1;
+        }
+
+    }
+
+    media = soma / somaMulher;
+
+    for(int x = 0; x < ; x++) {
+        printf("%s", nome[x]);
+    }
+    printf("homem mais velho: %s", nomeIdade);
+    printf("Média de idade das mulheres: %.2f", media);
+
+}
+
 int main(void)
 {
 
@@ -726,6 +767,7 @@ int main(void)
     // questao19();
     // questao20();
     // questao21();
-    //
+    // questao22();
+    // questao23();
     return 0;
 }
