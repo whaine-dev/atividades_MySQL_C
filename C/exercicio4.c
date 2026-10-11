@@ -2,6 +2,11 @@
 #include <string.h>
 
 
+
+void linha(void) {
+    printf("====================\n");
+}
+
 void questao1(void)
 {
 
@@ -628,6 +633,45 @@ void questao20(void) {
     printf("percentual de consoante: %.2f%%", percentual);
 }
 
+void questao21(void) {
+
+    char nome[20];
+    int nota1[5], nota2[5], soma[5];
+    float media[5];
+
+    for(int i = 0; i < 5; i++) {
+        linha();
+        printf("%i° aluno\n", i + 1);
+        printf("Digite o nome do aluno: ");
+        fgets(nome, sizeof(nome), stdin);
+
+        printf("Digite a 1° nota: ");
+        scanf("%i", &nota1[i]);
+
+        printf("Digite a 2° nota: ");
+        scanf("%i", &nota2[i]);
+        getchar();
+
+        printf("\n");
+
+        soma[i] = nota1[i] + nota2[i];
+
+        media[i] = (float)soma[i] / 2;
+    }
+
+    for(int x = 0; x < 5; x++) {
+        printf("\nNome do aluno: %s\n", nome);
+        printf("1° nota: %i\n", nota1[x]);
+        printf("2° nota: %i\n", nota2[x]);
+        printf("Média: %.2f", media[x]);
+    }
+
+}
+
+void linha(void) {
+    printf("====================\n");
+}
+
 
 int main(void)
 {
@@ -652,6 +696,7 @@ int main(void)
     // questao18();
     // questao19();
     // questao20();
+    // questao21();
 
     return 0;
 }
