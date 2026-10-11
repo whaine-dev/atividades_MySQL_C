@@ -1,7 +1,61 @@
 #include <stdio.h>
 #include <string.h>
 
+void linha(void);
+void questao1(void);
+void questao2(void);
+void questao3(void);
+void questao4(void);
+void questao5(void);
+void questao6(void);
+void questao7(void);
+void questao8(void);
+void questao9(void);
+void questao10(void);
+void questao11(void);
+void questao12(void);
+void questao13(void);
+void questao14(void);
+void questao15(void);
+void questao16(void);
+void questao17(void);
+void questao18(void);
+void questao19(void);
+void questao20(void);
+void questao21(void);
+void questao22(void);
+void questao23(void);
+void questao24(void);
 
+int main(void)
+{
+
+    // questao1();
+    // questao2();
+    // questao3();
+    // questao4();
+    // questao5();
+    // questao6();
+    // questao7();
+    // questao8();
+    // questao9();
+    // questao10();
+    // questao11();
+    // questao12();
+    // questao13();
+    // questao14();
+    // questao15();
+    // questao16();
+    // questao17();
+    // questao18();
+    // questao19();
+    // questao20();
+    // questao21();
+    // questao22();
+    // questao23();
+    // questao24();
+    return 0;
+}
 
 void linha(void) {
     printf("====================\n");
@@ -759,34 +813,4 @@ void questao24(void) {
     }
 
     printf("resultada da soma dos número impares: %i", soma);
-}
-
-int main(void)
-{
-
-    // questao1();
-    // questao2();
-    // questao3();
-    // questao4();
-    // questao5();
-    // questao6();
-    // questao7();
-    // questao8();
-    // questao9();
-    // questao10();
-    // questao11();
-    // questao12();
-    // questao13();
-    // questao14();
-    // questao15();
-    // questao16();
-    // questao17();
-    // questao18();
-    // questao19();
-    // questao20();
-    // questao21();
-    // questao22();
-    // questao23();
-    // questao24();
-    return 0;
 }
