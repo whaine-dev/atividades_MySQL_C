@@ -585,6 +585,25 @@ int main() {
     return 0;
 }
 
+
+void questao19(void) {
+    int numero[10], oposto[10];
+
+    for(int i = 0; i < 10; i++) {
+        printf("Digite o %i° númeno: ", i + 1);
+        scanf("%i", &numero[i]);
+    }
+
+
+    for(int i = 0; i < 10; i++) {
+        oposto[9 - i] = numero[i]; //aqui o vetor oposta começou a receber da possição 9 até a 0
+    }
+
+    for(int s = 0; s < 10; s++) {
+        printf("%i\n", oposto[s]);
+    }
+}
+
 int main(void)
 {
 
@@ -606,6 +625,7 @@ int main(void)
     // questao16();
     // questao17();
     // questao18();
+    // questao19();
 
     return 0;
 }
