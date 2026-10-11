@@ -743,6 +743,24 @@ void questao23(void) {
 
 }
 
+void questao24(void) {
+
+    int num[200], soma = 0;
+
+    for(int i = 0; i < 10; i++) {
+        printf("Digite o %i° número: ", i + 1);
+        scanf("%i", &num[i]);
+        
+        if(num[i] % 2 == 0) {
+
+        } else {
+            soma = soma + num[i];
+        }
+    }
+
+    printf("resultada da soma dos número impares: %i", soma);
+}
+
 int main(void)
 {
 
@@ -769,5 +787,6 @@ int main(void)
     // questao21();
     // questao22();
     // questao23();
+    // questao24();
     return 0;
 }
