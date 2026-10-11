@@ -668,10 +668,6 @@ void questao21(void) {
 
 }
 
-void linha(void) {
-    printf("====================\n");
-}
-
 
 int main(void)
 {
