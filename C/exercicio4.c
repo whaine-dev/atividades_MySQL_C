@@ -735,7 +735,7 @@ void questao23(void) {
 
     media = soma / somaMulher;
 
-    for(int x = 0; x < ; x++) {
+    for(int x = 0; x < 20; x++) {
         printf("%s", nome[x]);
     }
     printf("homem mais velho: %s", nomeIdade);
