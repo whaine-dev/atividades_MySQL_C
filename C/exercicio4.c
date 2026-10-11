@@ -667,7 +667,40 @@ void questao21(void) {
     }
 
 }
+void questao22(void) {
 
+    float menor, maior, soma = 0, media;
+    float tomada[20];
+
+
+    for(int y = 0; y < 20; y++) {
+        printf("%i° tempo: ", y + 1);
+        scanf("%f", &tomada[y]);
+
+        soma = soma + tomada[y];
+
+        if(y == 0) {
+            menor = tomada[y];
+            maior = tomada[y];
+        }
+
+        if(tomada[y] > maior) {
+            maior = tomada[y];
+        }
+
+        if(tomada[y] < menor) {
+            menor = tomada[y];
+        }
+
+    }
+
+    media = (float)soma / 20;
+
+    printf("Média: %.2f\n", media);
+    printf("Pior tempo: %.2f\n", maior);
+    printf("melhor tempo: %.2f\n", menor);
+
+}
 
 int main(void)
 {
@@ -693,6 +726,6 @@ int main(void)
     // questao19();
     // questao20();
     // questao21();
-
+    //
     return 0;
 }
