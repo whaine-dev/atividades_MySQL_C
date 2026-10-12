@@ -1,4 +1,15 @@
 #include <stdio.h> 
+
+void questao3(void);
+void questao7(void);
+void questao8(void);
+void questao12(void);
+void questao13(void);
+void questao15(void);
+void questao16(void);
+void questao17(void);
+void questao18(void);
+
 int main() { 
 
     questao3();
