@@ -45,6 +45,7 @@ void questao3(void) {
     int nota[3], soma = 0;
     float media;
 
+    printf("Questão 3");
     printf("Digite seu nome: ");
     fgets(nome, sizeof(nome), stdin);
     
@@ -65,6 +66,7 @@ void questao7(void) {
 
     int num;
 
+    printf("Questão 7");
     printf("Digite um número: ");
     scanf("%i", &num);
 
@@ -82,6 +84,7 @@ void questao8(void) {
 
     int idade;
 
+    printf("Questão 8");
     printf("Digite um número: ");
     scanf("%i", &idade);
 
@@ -100,6 +103,7 @@ void questao12(void) {
 
     int num;
 
+    printf("Questão 12");
     printf("Digite um número: ");
     scanf("%i", &num);
 
@@ -113,6 +117,7 @@ void questao13() {
     int num[10], soma = 0;
     float media;
 
+    printf("Questão 13");
     printf("Digite de 1 até 10\n");
     for(int i = 0; i < 10; i++ ) {
         printf("%i° nota: ", i + 1);
@@ -132,6 +137,7 @@ void questao15() {
     int num[10], soma = 0;
     int maior = 0;
 
+    printf("Questão 15");
     printf("Digite de 1 até 10\n");
     for(int i = 0; i < 10; i++ ) {
         printf("%i° nota: ", i + 1);
@@ -162,6 +168,7 @@ void questao16(void) {
     float soma = 0, aprovados = 0, reprovados = 0;
     int alunos = 40;
 
+    printf("Questão 16");
     for(int y = 0; y < 5; y++) {
         printf("Digite a nota do %i° aluno: ", y + 1);
         scanf("%f", &nota[y]);
@@ -205,6 +212,7 @@ void questao17(void) {
 
    int num, cont = 1;
 
+    printf("Questão 17");
    printf("Digite um número: ");
    scanf("%i", &num);
 
@@ -221,6 +229,7 @@ void questao18(void) {
 
   int num[100], somaPositivo = 0, somaNegativo = 0, somaZero = 0;
 
+  printf("Questão 18");
   for(int l = 0; l < 10; l++) {
     printf("Digite o %i° número: ", l + 1);
     scanf("%i", &num[l]);
