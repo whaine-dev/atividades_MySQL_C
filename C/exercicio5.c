@@ -1,5 +1,6 @@
 #include <stdio.h> 
 
+void linha(void);
 void questao3(void);
 void questao7(void);
 void questao8(void);
@@ -13,18 +14,30 @@ void questao18(void);
 int main() { 
 
     questao3();
+    linha();
     questao7();
+    linha();
     questao8();
+    linha();
     questao12();
+    linha();
     questao13();
+    linha();
     questao15();
+    linha();
     questao16();
+    linha();
     questao17();
+    linha();
     questao18();
 
 
     return 0;
 } 
+
+void linha(void){
+    printf("\n\n\n");
+}
 
 void questao3(void) { 
 
