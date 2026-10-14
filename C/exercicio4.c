@@ -29,35 +29,58 @@ void questao24(void);
 
 int main(void)
 {
-
-    // questao1();
-    // questao2();
-    // questao3();
-    // questao4();
-    // questao5();
-    // questao6();
-    // questao7();
-    // questao8();
-    // questao9();
-    // questao10();
-    // questao11();
-    // questao12();
-    // questao13();
-    // questao14();
-    // questao15();
-    // questao16();
-    // questao17();
-    // questao18();
-    // questao19();
-    // questao20();
-    // questao21();
-    // questao22();
-    // questao23();
-    // questao24();
+    questao1();
+    linha();
+    questao2();
+    linha();
+    questao3();
+    linha();
+    questao4();
+    linha();
+    questao5();
+    linha();
+    questao6();
+    linha();
+    questao7();
+    linha();
+    questao8();
+    linha();
+    questao9();
+    linha();
+    questao10();
+    linha();
+    questao11();
+    linha();
+    questao12();
+    linha();
+    questao13();
+    linha();
+    questao14();
+    linha();
+    questao15();
+    linha();
+    questao16();
+    linha();
+    questao17();
+    linha();
+    questao18();
+    linha();
+    questao19();
+    linha();
+    questao20();
+    linha();
+    questao21();
+    linha();
+    questao22();
+    linha();
+    questao23();
+    linha();
+    questao24();
     return 0;
 }
 
 void linha(void) {
+    printf("\n\n");
     printf("====================\n");
 }
 
@@ -66,13 +89,14 @@ void questao1(void)
 
     int num;
 
+    printf("QUESTÂO 1\n");
     printf("Digite um número para tabudada: ");
     scanf("%i", &num);
 
-    for (int i = 1; i < 10; i++)
+    for (int i = 1; i < 11; i++)
     {
 
-        printf("%i x %i = %i\n", i, num, i * num);
+        printf("%i x %i = %i\n", i , num, i * num);
     }
 }
 
@@ -87,6 +111,7 @@ void questao2(void)
     const int adicional = 40;
     const float inss_ir = 0.13;
 
+    printf("QUESTÂO 2\n");
     for (int i = 0; i < 20; i++)
     {
         printf("Digite seu nome: ");
@@ -128,13 +153,14 @@ void teste(void)
 
 void questao3(void) {
 
-   int boi = 1, Cboi = 0;
+   int boi = 1, Cboi = 0, aux;
    float peso, maior = 0;
 
+    printf("QUESTÂO 3\n");
     printf("Digite o codíco do boi: ");
-        scanf("%i", &Cboi);
+    scanf("%i", &Cboi);
     
-    while(boi != 0) {
+    while(Cboi != 0) {
         printf("======= %i° boi =======\n", boi);
         printf("Digite o peso do boi: ");
         scanf("%f", &peso);
@@ -143,7 +169,8 @@ void questao3(void) {
         if(peso >= maior) {
 
             maior = peso;
-            Cboi;
+            aux = Cboi;
+            
         }
 
         boi++;
@@ -152,7 +179,7 @@ void questao3(void) {
         scanf("%i", &Cboi);
     }
 
-    printf("codígo do boi: %i", boi);
+    printf("\ncodígo do boi: %d\n", aux);
     printf("peso do boi: %.2f", maior);
 
 }
@@ -163,6 +190,7 @@ void questao4(void)
     char nome[10][50];
     float salario[10], reajuste[10];
 
+    printf("QUESTÂO 4\n");
     for (int x = 0; x < 10; x++)
     {
         printf("Digite seu nome: ");
@@ -182,6 +210,7 @@ void questao5(void)
 
     float nota[2], media_p, resultado_p;
 
+    printf("QUESTÂO 5\n");
     printf("Digite a 1° nota: ");
     scanf("%f", &nota[0]);
     printf("Digite a 2° nota: ");
@@ -199,7 +228,8 @@ void questao6(void)
     float dola, cambio;
     const float real = 5.50; //-> coloquei const pela pratica pq ele é uma valor determidado.
 
-    printf("Digite o valor em dola: ");
+    printf("QUESTÂO 6\n");
+    printf("Digite o valor em dolar: ");
     scanf("%f", &dola);
 
     cambio = dola * real;
@@ -207,39 +237,12 @@ void questao6(void)
     printf("Conversão: %.2f", cambio);
 }
 
-void questao7(void)
-{
-
-    float a, b, resultado, gasolina, gasto, consumo;
-    const float km_pl = 12;
-
-    printf("Digite a distância do ponto A: ");
-    scanf("%f", &a);
-    printf("Digite a distância do ponto b: ");
-    scanf("%f", &b);
-    printf("Preço da gasolina: ");
-    scanf("%f", &gasolina);
-
-    if (b < a)
-    {
-        printf("A distância b não pode ser menor que a distância a");
-    }
-    else
-    {
-        consumo = (b - a) / km_pl;
-
-        gasto = consumo * gasolina;
-
-        printf("Litros gastos: %.2f\n", consumo);
-        printf("Valor gastos: R$%.2f", gasto);
-    }
-}
-
 void questao7(void) {
 
     float a, b, resultado, gasolina, gasto, consumo;
     const float km_pl = 12;
 
+    printf("QUESTÂO 7\n");
     printf("Digite a distância do ponto A: ");
     scanf("%f", &a);
     printf("Digite a distância do ponto b: ");
@@ -264,6 +267,7 @@ void questao8(void) {
 
     int n1, n2, aux;
 
+    printf("QUESTÂO 8\n");
     printf("Digite um valor: ");
     scanf("%i", &n1);
     printf("Digite outro valor: ");
@@ -282,6 +286,7 @@ void questao9(void)
 
     int n1;
 
+    printf("QUESTÂO 9\n");
     printf("Digite um número: ");
     scanf("%i", &n1);
 
@@ -300,6 +305,7 @@ void questao10(void)
 
     float nota[3], soma = 0, media;
 
+    printf("QUESTÂO 10\n");
     for (int x = 0; x < 3; x++)
     {
         printf("Digite a %i° nota: ", x + 1);
@@ -332,6 +338,7 @@ void questao11(void)
 
     int idade;
 
+    printf("QUESTÂO 11\n");
     printf("Digite sua idade: ");
     scanf("%i", &idade);
 
@@ -359,6 +366,7 @@ void questao12(void)
     float n1, n2, adi, sub, mul, div;
     char cal;
 
+    printf("QUESTÂO 12\n");
     printf("Calculadora em C\n");
     printf("+\n");
     printf("-\n");
@@ -418,6 +426,7 @@ void questao13(void)
 
     int num[3], aux, flag;
 
+    printf("QUESTÂO 13\n");
     for (int y = 0; y < 3; y++)
     {
         printf("Digite o %i° número: ", y + 1);
@@ -449,6 +458,7 @@ void questao14(void)
     char nome[10], NomeMaiorIdade[10], NomeMenorIdade[10];
     int idade, i = 1, maior, menor;
 
+    printf("QUESTÂO 14\n");
     printf("Digite o 1° nome: ");
     fgets(nome, 10, stdin);
 
@@ -504,6 +514,7 @@ void questao15(void)
 
     int soma = 0;
 
+    printf("QUESTÂO 15\n");
     for (int i = 0; i < 50; i++)
     {
 
@@ -525,6 +536,7 @@ void questao16(void) {
     int maior = 0, menor = 999;
     char nome[50], homemValho[50], mulherNova[50];
 
+    printf("QUESTÂO 16\n");
     for(int i = 0; i < 200; i++) {
         printf("Digite 1 para homem e 2 para mulher: ");
         scanf("%i", &genero[i]);
@@ -577,6 +589,7 @@ void questao17(void) {
 
     int numero[10], maior, menor;
 
+    printf("QUESTÂO 17\n");
     for(int i = 0; i < 10; i++){
         printf("Digite o %i° número: ", i + 1);
         scanf("%i", &numero[i]);
@@ -601,11 +614,12 @@ void questao17(void) {
 
 }
 
-int main() {
+void questao18(void) {
 
     int numero[10], vp[10], vi[10];
     int par = 0, impar = 0;
 
+    printf("QUESTÂO 18\n");
     for(int i = 0; i < 10; i++) {
         printf("Digite o %i° número: ", i + 1);
         scanf("%i", &numero[i]);
@@ -640,14 +654,13 @@ int main() {
      
     }
 
-
-    return 0;
 }
 
 
 void questao19(void) {
     int numero[10], oposto[10];
 
+    printf("QUESTÂO 19\n");
     for(int i = 0; i < 10; i++) {
         printf("Digite o %i° númeno: ", i + 1);
         scanf("%i", &numero[i]);
@@ -668,6 +681,7 @@ void questao20(void) {
     int vogais = 0, consoante = 0;
     float percentual;
 
+    printf("QUESTÂO 20\n");
     printf("Digite uma palavra de 20 caracteres: ");
     fgets(letra, sizeof(letra), stdin);
 
@@ -693,6 +707,7 @@ void questao21(void) {
     int nota1[5], nota2[5], soma[5];
     float media[5];
 
+    printf("QUESTÂO 21\n");
     for(int i = 0; i < 5; i++) {
         linha();
         printf("%i° aluno\n", i + 1);
@@ -726,7 +741,7 @@ void questao22(void) {
     float menor, maior, soma = 0, media;
     float tomada[20];
 
-
+    printf("QUESTÂO 22\n");
     for(int y = 0; y < 20; y++) {
         printf("%i° tempo: ", y + 1);
         scanf("%f", &tomada[y]);
@@ -763,6 +778,7 @@ void questao23(void) {
     int soma = 0, somaMulher = 0;
     float media;
 
+    printf("QUESTÂO 23\n");
     for(int i = 0; i < 3; i++) {
         printf("\n%i° pessoa\n", i + 1);
         printf("Digite seu nome: ");
@@ -801,6 +817,7 @@ void questao24(void) {
 
     int num[200], soma = 0;
 
+    printf("QUESTÂO 24\n");
     for(int i = 0; i < 10; i++) {
         printf("Digite o %i° número: ", i + 1);
         scanf("%i", &num[i]);
