@@ -3,6 +3,7 @@
 float media(float nota1, float nota2, float nota3);
 int resto(int num1, int num2);
 int menor(int valor[3]);
+int anoNascimento();
 void linha(void);
 
 
@@ -38,6 +39,12 @@ int main(void)
     
     printf("Menor valor: %i\n\n", menorvalor);
 
+    linha();
+
+    anoNascimento();
+
+    linha();
+
     return 0;
 
 }
@@ -68,4 +75,23 @@ int menor(int valor[3]) {
     }
 
     return menorValor;
+}
+
+int anoNascimento() {
+
+    int idade;
+    int ano;
+    const int anoAtual = 2026;
+
+    printf("Digite o seu ano de Nasciemnto: ");
+    scanf("%i", &ano);
+
+    if (ano < anoAtual) {
+        idade = anoAtual - ano;
+    }
+
+    printf("sua idade é: idade: %i", idade);
+
+    return idade;
+    
 }
