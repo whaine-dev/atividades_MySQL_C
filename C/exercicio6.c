@@ -4,6 +4,7 @@ float media(float nota1, float nota2, float nota3);
 int resto(int num1, int num2);
 int menor(int valor[3]);
 int anoNascimento();
+int mes(int mesAtual);
 void linha(void);
 
 
@@ -44,6 +45,13 @@ int main(void)
     anoNascimento();
 
     linha();
+
+    int mesAtual;
+    
+    printf("Digite o Mês Atual: ");
+    scanf("%i", &mesAtual);
+
+    mesAtual = mes(mesAtual);
 
     return 0;
 
@@ -94,4 +102,20 @@ int anoNascimento() {
 
     return idade;
     
+}
+
+int mes(int mesAtual) {
+
+    int anoFinal;
+
+    if(mesAtual <= 12) {
+        anoFinal =  12 - mesAtual;
+
+        printf("Faltam %i Mês acabar", anoFinal);
+    } else {
+        printf("o Mês não pode ser maior que 12");
+    }
+
+
+    return anoFinal;
 }
