@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <string.h>
 
 void linha(void);
 int cad_aluno(void);
+int cad_produto(void);
 int cad_funcionario(void);
 
 typedef struct{
@@ -25,9 +27,19 @@ typedef struct{
 
 }produto;
 
+typedef struct{
+    char nome[100];
+    char cpf[14];
+    int idade;
+    float salario;
+
+}funcionario;
+
 int main() {
     
-    //cad_aluno();
+    cad_aluno();
+    linha();
+    cad_produto();
     linha();
     cad_funcionario();
 
@@ -70,7 +82,7 @@ int cad_aluno(void) {
     return 0;
 }
 
-int cad_funcionario(void) {
+int cad_produto(void) {
 
     produto inforProduto[3];
 
@@ -98,6 +110,52 @@ int cad_funcionario(void) {
 
     }
 
+    return 0;
+}
+
+int cad_funcionario(void) {
+
+    funcionario infoFuncionario[3];
+
+    float somaSalario = 0;
+    float media = 0;
+    float maiorSalario = 0;
+    char nomeMaiorSalario[100];
+
+    for(int i = 0; i < 3; i++) {
+        printf("Digite o nome do %i° funcionario: ", i + 1);
+        fgets(infoFuncionario[i].nome, 100, stdin);
+
+        printf("Digite o CPF: ");
+        fgets(infoFuncionario[i].cpf, 14, stdin);
+
+        printf("Digite a Idade: ");
+        scanf("%i", &infoFuncionario[i].idade);
+
+        printf("Digite o sálario: ");
+        scanf("R$%f", &infoFuncionario[i].salario);
+        getchar();
+        printf("\n\n");
+
+        somaSalario = somaSalario + infoFuncionario[i].salario;
+
+        if(infoFuncionario[i].salario > maiorSalario) {
+            maiorSalario = infoFuncionario[i].salario;
+            strcpy(nomeMaiorSalario, infoFuncionario[i].nome);
+        }
+
+    }
+
+    media = somaSalario / 3;
+
+    for(int x = 0; x < 3; x++) {
+        printf("\n%i° Funcionário Cadastradio: %s", x + 1, infoFuncionario[x].nome);
+        printf("Seu CPF: %s", infoFuncionario[x].cpf);
+    }
+
+    printf("Média salarial: %.2f\n", media);
+    printf("Funcionário %s tem o maior salario de: R$%.2f", nomeMaiorSalario, maiorSalario);
 
     return 0;
 }
+
